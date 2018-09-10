@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+	<servlet>
+		<servlet-name>One</servlet-name>
+		<servlet-class>Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>One</servlet-name>
+		<url-pattern>/log</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Two</servlet-name>
+		<servlet-class>Validator</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Two</servlet-name>
+		<url-pattern>/val</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Three</servlet-name>
+		<servlet-class>Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Three</servlet-name>
+		<url-pattern>/reg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Four</servlet-name>
+		<servlet-class>DBRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Four</servlet-name>
+		<url-pattern>/dbreg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Five</servlet-name>
+		<servlet-class>LogOut</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Five</servlet-name>
+		<url-pattern>/lout</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<filter-name>f1</filter-name>
+		<filter-class>UNameFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>f1</filter-name>
+		<url-pattern>/reg</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+        <filter-name>f2</filter-name>
+        <filter-class>PassFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>f2</filter-name>
+        <url-pattern>/reg</url-pattern>
+    </filter-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
